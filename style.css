@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+:root{
+    --primaryColor: #fff9f4;
+    --secondaryColor: #e5e5e5;
+}
+
 @font-face {
     font-family: Bebas;
     src: url("./fonts/BebasNeue-Regular.ttf");
@@ -11,7 +16,7 @@
 
 header {
     width: 100%;
-    background-color: #fff9f4;
+    background-color: var(--primaryColor);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,6 +72,7 @@ header .content {
     align-items: center;
     justify-content: center;
     gap: 60px;
+    background-color: var(--primaryColor )
 }
 
 .hero-section .shoe {
@@ -95,11 +101,38 @@ header .content {
     border-radius: 5px;
 }
 
+/* Casual shoes */
+
+.casual {
+    width: 100%;
+    background-color: var(--secondaryColor);
+    padding: 55px 62px;
+}
+
+.casual h1 {
+    font-family: Bebas;
+}
+
+.casual .shoe {
+    width: 30%;
+    break-after: #fff;
+    padding: 12px;
+    border-radius: 20px;
+}
+
+.casual .shoe img {
+    width: 100%;
+}
+
+.casual .shoeImg {
+    background-color: #f1f1f1
+}
+
 /* Media queries */
-@media screen and (max-width:768px) {
+@media screen and (max-width:480px) {
     .icon {
         display: block;
-        width: 80px;
+        width: 70px;
     }
 
     .nav {
@@ -112,10 +145,52 @@ header .content {
 
     .header {
         padding: 0px;
+        justify-content: space-between;
     }
 
     .header .logo {
-        width: 50%;
+        width: 56%;
+    }
+
+    .header .logoImg {
+        width: 30%;
+    }
+
+    .header .logoImg img {
+        width: 100%;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        padding: 10px 27px;
+    }
+
+    .hero-section .shoe {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    .icon {
+        display: block;
+        width: 70px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .header {
+        padding: 0px;
+        justify-content: space-between;
+    }
+
+    .header .logo {
+        width: 56%;
     }
 
     .header .logoImg {
